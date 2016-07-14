@@ -1,0 +1,4 @@
+APT::Get::Install-Recommends "false";
+APT::Get::Install-Suggests "false";
+APT::Get::Acquire-Translations "none";
+APT::Force-LoopBreak "true";
