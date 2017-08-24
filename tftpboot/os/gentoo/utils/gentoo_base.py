@@ -13,8 +13,11 @@ class GentooStage3(object):
 
     def __init__(self):
         self.stage3_dl = self.get_latest_stage3_link()
-        self.get_latest_stage3_archive()
+        #self.get_latest_stage3_archive()
 
+        return None
+
+    def __call__(self):
         return None
 
     def get_latest_stage3_link(self):
@@ -61,6 +64,7 @@ class GentooStage3(object):
             raise
 
         return None
+
 
 if __name__ == '__main__':
     try:

@@ -12,6 +12,7 @@ check_services() {
     service rsyslog status &>/dev/null|| fail=$((fail+1))
     service isc-dhcp-server status &>/dev/null || fail=$((fail+1))
     service tftpd-hpa status &>/dev/null || fail=$((fail+1))
+    service nginx start &>/dev/null || fail=$((fail+1))
     return $fail
 }
 
