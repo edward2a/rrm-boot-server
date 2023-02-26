@@ -4,11 +4,12 @@ FROM debian
 ADD configs/apt_garbage /etc/apt/apt.conf.d/00nocrap
 
 # install dhcpd and tftpd
-RUN apt-get update && apt-get install -yq \
+RUN apt-get update && apt-get install -yq --no-install-recommends \
         isc-dhcp-server \
         tftpd-hpa \
         rsyslog \
-        nginx
+        nginx \
+        procps
 
 # cleanup configs
 RUN rm -rf /etc/dhcp/*
